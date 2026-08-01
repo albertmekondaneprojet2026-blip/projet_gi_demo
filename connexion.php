@@ -32,7 +32,12 @@ echo '<input type="email" name="email" id="email" required>';
 echo '<label for="mot_de_passe">Mot de passe</label>';
 echo '<input type="password" name="mot_de_passe" id="mot_de_passe" required>';
 
-echo '<button type="submit">Se connecter</button>';
+echo '<div class="case-souvenir">';
+echo '<input type="checkbox" name="se_souvenir" id="se_souvenir" value="1">';
+echo '<label for="se_souvenir">Se souvenir de moi</label>';
+echo '</div>';
+
+#echo '<button type="submit">Se connecter</button>';-->
 
 echo '</form>';
 

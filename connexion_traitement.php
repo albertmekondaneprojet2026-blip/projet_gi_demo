@@ -27,8 +27,12 @@ if (!$utilisateur || !password_verify($motDePasse, $utilisateur['mot_de_passe'])
 }
 
 // Connexion réussie : on démarre la session utilisateur
-$_SESSION['utilisateur_id'] = $utilisateur['id'];
-$_SESSION['utilisateur_nom'] = $utilisateur['nom'];
+/*$_SESSION['utilisateur_id'] = $utilisateur['id'];
+$_SESSION['utilisateur_nom'] = $utilisateur['nom'];*/
+// Se souvenir de l'utilisateur pendant 30 jours via un cookie
+if (isset($_POST['se_souvenir'])) {
+    setcookie('utilisateur_id_souvenir', $utilisateur['id'], time() + (30 * 24 * 60 * 60), '/');
+}
 
 header('Location: index.php');
 exit;

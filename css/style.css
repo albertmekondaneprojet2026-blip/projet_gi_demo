@@ -89,3 +89,15 @@ p {
     margin-top: 1rem;
     font-size: 0.9rem;
 }
+
+.case-souvenir {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.case-souvenir input {
+    width: auto;
+}
